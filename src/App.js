@@ -61,12 +61,13 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (cardsLeft === 0) {
+    console.log(cardsLeft, points)
+    if (cardsLeft === 0 && (points.player1 > 0 || points.player2 > 0)) {
       setTimeout(() => {
         alert(points.player1 > points.player2 ? 'Player1 Win!' : 'Player2 Win!')
       }, 1000)
     }
-  }, [cardsLeft])
+  }, [cardsLeft, points])
 
   const onReplay = () => {
     fetchCards()

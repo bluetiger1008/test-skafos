@@ -22,7 +22,7 @@ const splitArray = (arr) => {
   const shuffledArr = shuffleArray(arr)
   let chunked = []
   Array.from({ length: Math.ceil(shuffledArr.length / 5) }, (val, i) => {
-    chunked.push(shuffledArr.slice(i * 5, i * 5 + 5))
+    return chunked.push(shuffledArr.slice(i * 5, i * 5 + 5))
   })
 
   return chunked
